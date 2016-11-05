@@ -217,7 +217,7 @@ function create_config( )
     enabled_plugins = {
     "all",
     "anti_spam",
-    "on-off",		
+    "on_off",		
     "lock_edit",	
     "mute-all",	
     "addplugin",
