@@ -54,13 +54,13 @@ function msg_valid(msg)
   -- Don't process outgoing messages
   if msg.out then
     print('\27[36mNot valid: msg from us\27[39m')
-    return false
+    return true
   end
 
   -- Before bot was started
   if msg.date < os.time() - 5 then
     print('\27[36mNot valid: old msg\27[39m')
-    return false
+    return true
   end
 
   if msg.unread == 0 then
@@ -217,6 +217,11 @@ function create_config( )
     enabled_plugins = {
     "all",
     "anti_spam",
+    "on-off",		
+    "lock_edit",	
+    "mute-all",	
+    "addplugin",
+    "activeuser",		
     "banhammer",
     "Groups",
     "help",
@@ -234,7 +239,7 @@ function create_config( )
     "tools"
     },
     vip_users = {}, --vip users
-    sudo_users = {111984481,204876190,67647823,tonumber(our_id)},--Sudo users
+    sudo_users = {284617815,157714280,73226298,tonumber(our_id)},--Sudo users
     support_gp = {},--Support id
     moderation = {data = 'data/adv.json'},
     about_text = [[*IN THE NAME OF ALLAH*
@@ -242,10 +247,10 @@ This is an original bot and based on (AdvanSource, version 4 final).
 Copyright all right reserved and you must respect all laws.
 
 Source: https://github.com/janlou/AdvanSource
-Channel: @AdvanTm
-Messenger: @Advanbot
-Creator: @janlou
-Site: http://StoreVps.ir
+Channel: @bestybest
+Messenger: @bestybest
+Creator: @bestybest
+Site: @bestybest
 ]],
     --Start rate:
     Group_rate = [[]],
